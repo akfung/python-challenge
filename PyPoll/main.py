@@ -26,13 +26,17 @@ with open(csv_path, newline='', encoding="UTF-8") as csv_file:
         vote_per_candidate[candidate_list.index(row[2])] +=1 
     #divide vote per candidate by total vote to find popular vote because fuck me if I'm gonna calculate electoral votes
     for vote in vote_per_candidate:
-        popular_vote.append(round(vote*100/total_vote_count, 4))
-        #make array connecting candidate to votes
-        vote_array = zip(candidate_list, vote_per_candidate)
-        vote_array.sort(key=sortSecond)
-    print(candidate_list)
-    print(total_vote_count)
-    print(vote_per_candidate)
-    print(popular_vote)
-    print(vote_array)
+        popular_vote.append(round(vote*100/total_vote_count, 5))
+        #find index of highest popular vote and look up that index in candidate list
+        winner = candidate_list[popular_vote.index(max(popular_vote))]
+    print("Election Results")
+    print("-------------------------")
+    print("Total Votes: {}".format(total_vote_count))
+    #loop for candidate stats
+    for i in range(0,len(candidate_list)):
+        print("{}: {}% ({})".format(candidate_list[i], popular_vote[i], vote_per_candidate[i]))
+    print("-------------------------")
+    print("The winner is {}".format(winner))
+    print("-------------------------")
+
     

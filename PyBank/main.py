@@ -40,12 +40,13 @@ with open(csv_path, newline='', encoding="UTF-8") as csv_file:
     print("Greatest decrease: {} on {}".format(greatest_decrease, greatest_decrease_month))
 
 #write to text file
+#add each entry to new line for readability
 file = open("financials.txt", "w")
-file.write("Financial Analysis")
-file.write("-------------------")
-file.write("Total profit: {}".format(total_profit))
-file.write("Total Months: {}".format(total_months))
-file.write("Average Profit: {}".format(average_profit))
-file.write("Greatest increase: {} on {}".format(greatest_increase, greatest_increase_month))
-file.write("Greatest decrease: {} on {}".format(greatest_decrease, greatest_decrease_month))
+file.write("Financial Analysis\n")
+file.write("-------------------\n")
+file.write("Total profit: {}\n".format(total_profit))
+file.write("Total Months: {}\n".format(total_months))
+file.write("Average Profit: {}\n".format(average_profit))
+file.write("Greatest increase: {} on {}\n".format(greatest_increase, greatest_increase_month))
+file.write("Greatest decrease: {} on {}\n".format(greatest_decrease, greatest_decrease_month))
 file.close()

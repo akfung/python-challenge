@@ -1,1 +1,5 @@
-Financial Analysis-------------------Total profit: 38382578.0Total Months: 86Average Profit: 446309.0465116279Greatest increase: 1170593.0 on Greatest decrease: -1196225.0 on Sep-2013
+Financial Analysis
+-------------------
+Total profit: 38382578.0
+Total Months: 86
+Average Profit: 446309.0465116279Greatest increase: 1170593.0 on Greatest decrease: -1196225.0 on Sep-2013

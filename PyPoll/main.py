@@ -38,5 +38,17 @@ with open(csv_path, newline='', encoding="UTF-8") as csv_file:
     print("-------------------------")
     print("The winner is {}".format(winner))
     print("-------------------------")
+#Write files
+file = open("Election Results.txt", "w")
+file.write("Election Results\n")
+file.write("-------------------------\n")
+file.write("Total Votes: {}\n".format(total_vote_count))
+#loop for candidate stats
+for i in range(0,len(candidate_list)):
+    file.write("{}: {}% ({})\n".format(candidate_list[i], popular_vote[i], vote_per_candidate[i]))
+file.write("-------------------------\n")
+file.write("The winner is {}\n".format(winner))
+file.write("-------------------------\n")
+
 
     

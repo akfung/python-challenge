@@ -38,3 +38,14 @@ with open(csv_path, newline='', encoding="UTF-8") as csv_file:
     print("Average Profit: {}".format(average_profit))
     print("Greatest increase: {} on {}".format(greatest_increase, greatest_increase_month))
     print("Greatest decrease: {} on {}".format(greatest_decrease, greatest_decrease_month))
+
+#write to text file
+file = open("financials.txt", "w")
+file.write("Financial Analysis")
+file.write("-------------------")
+file.write("Total profit: {}".format(total_profit))
+file.write("Total Months: {}".format(total_months))
+file.write("Average Profit: {}".format(average_profit))
+file.write("Greatest increase: {} on {}".format(greatest_increase, greatest_increase_month))
+file.write("Greatest decrease: {} on {}".format(greatest_decrease, greatest_decrease_month))
+file.close()
